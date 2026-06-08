@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - El Vigilante</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        h1 { color: #ff4444; margin-bottom: 20px; }
+        h2 { margin: 30px 0 15px 0; color: #ff8888; }
+        h3 { margin: 20px 0 10px 0; }
+        .code-block {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 3px solid #ff4444;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+        th { background: #ff4444; }
+        .note {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #ffaa00;
+            margin: 20px 0;
+        }
+        a { color: #ff8888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" style="color: #ff4444; text-decoration: none;">← Volver al inicio</a>
+        
+        <h1>📚 Documentación - El Vigilante</h1>
+        
+        <h2>🚀 Instalación rápida</h2>
+        <p>Agrega esta línea en el <code>&lt;head&gt;</code> de tu página web:</p>
+        <div class="code-block">
+            &lt;script src="https://vigilante.onrender.com/vigilante.js?key=TU_API_KEY"&gt;&lt;/script&gt;
+        </div>
+        
+        <h2>🔑 Obtener una API Key</h2>
+        <p>Regístrate en nuestro <a href="/dashboard">Dashboard</a> para obtener tu API Key gratuita.</p>
+        
+        <h2>🎯 Eventos JavaScript</h2>
+        <p>Puedes escuchar eventos para reaccionar a las detecciones:</p>
+        <div class="code-block">
+            <pre style="margin:0; color:#fff;">
+// Cuando se detecta un humano
+window.addEventListener('vigilante-humano', (e) => {
+    console.log('Humano verificado', e.detail);
+});
+
+// Cuando se detecta un bot
+window.addEventListener('vigilante-bot', (e) => {
+    console.log('Bot detectado:', e.detail.motivo);
+});
+
+// Cuando hay error de conexión
+window.addEventListener('vigilante-error', (e) => {
+    console.error('Error:', e.detail);
+});</pre>
+        </div>
+        
+        <h2>🛡️ ¿Qué detecta El Vigilante?</h2>
+        <table>
+            <tr><th>Señal</th><th>Descripción</th></tr>
+            <tr><td>WebDriver</td><td>Detecta si se usa Selenium, Puppeteer, Playwright</td></tr>
+            <tr><td>Resolución headless</td><td>Resoluciones típicas de navegadores sin interfaz (800x600)</td></tr>
+            <tr><td>UserAgent sospechoso</td><td>Palabras como "headless", "phantom", "selenium"</td></tr>
+            <tr><td>Cookies deshabilitadas</td><td>Muchos bots no aceptan cookies</td></tr>
+            <tr><td>Inconsistencia de tiempo</td><td>Diferencia horaria entre cliente y servidor</td></tr>
+        </table>
+        
+        <h2>📊 Planes y límites</h2>
+        <table>
+            <tr><th>Plan</th><th>Verificaciones/mes</th><th>Precio</th></tr>
+            <tr><td>Gratuito</td><td>1,000</td><td>$0</td></tr>
+            <tr><td>Básico</td><td>50,000</td><td>$9/mes</td></tr>
+            <tr><td>Pro</td><td>250,000</td><td>$29/mes</td></tr>
+            <tr><td>Enterprise</td><td>Ilimitado</td><td>A convenir</td></tr>
+        </table>
+        
+        <div class="note">
+            💡 <strong>Nota:</strong> El plan gratuito es perfecto para pruebas y sitios pequeños. 
+            Cuando superes las 1,000 verificaciones, te notificaremos automáticamente.
+        </div>
+        
+        <h2>❓ Preguntas frecuentes</h2>
+        <h3>¿Afecta el rendimiento de mi web?</h3>
+        <p>No. El script pesa menos de 5KB y las verificaciones son asíncronas.</p>
+        
+        <h3>¿Qué pasa si El Vigilante falla?</h3>
+        <p>El sistema tiene un "modo permisivo": si no puede conectar con nuestro servidor, permite el acceso para no afectar a tus usuarios reales.</p>
+        
+        <h3>¿Puedo personalizar la página de bloqueo?</h3>
+        <p>Sí. En el Dashboard puedes configurar el estilo y mensaje de la página de bloqueo.</p>
+        
+        <h3>¿Es compatible con móviles?</h3>
+        <p>Totalmente. Funciona en todos los navegadores modernos, incluyendo iOS y Android.</p>
+        
+        <h2>📧 Soporte</h2>
+        <p>¿Problemas o preguntas? Escríbenos a <strong>soporte@elvigilante.com</strong></p>
+    </div>
+</body>
+</html>
