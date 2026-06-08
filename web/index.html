@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Vigilante | Protege tu web de bots</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .logo span { color: #ff4444; }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #ff4444; }
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .code-block {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 700px;
+            border-left: 4px solid #ff4444;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff4444;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #ff6666;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature h3 { margin: 15px 0; }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🚨 EL <span>VIGILANTE</span></div>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/docs">Documentación</a>
+                <a href="/dashboard">Dashboard</a>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h1>Protege tu web de bots automáticos</h1>
+            <p>El Vigilante detecta y bloquea bots, scrapers y ataques automatizados en tiempo real.</p>
+            <a href="/dashboard" class="btn">🚀 COMENZAR GRATIS</a>
+        </div>
+
+        <div class="code-block">
+            <pre style="margin:0; color:#fff;">
+&lt;script src="https://vigilante.onrender.com/vigilante.js?key=TU_API_KEY"&gt;&lt;/script&gt;</pre>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h2>🛡️</h2>
+                <h3>Detección Inteligente</h3>
+                <p>Analiza más de 15 señales para identificar bots con precisión.</p>
+            </div>
+            <div class="feature">
+                <h2>⚡</h2>
+                <h3>Rápido y Ligero</h3>
+                <p>El script pesa menos de 5KB y no afecta el rendimiento de tu sitio.</p>
+            </div>
+            <div class="feature">
+                <h2>📊</h2>
+                <h3>Estadísticas en Tiempo Real</h3>
+                <p>Dashboard con métricas de los bots detectados en tu sitio.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>🚨 El Vigilante - Protegiendo la web, un sitio a la vez</p>
+        </footer>
+    </div>
+</body>
+</html>
